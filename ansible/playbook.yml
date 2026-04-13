@@ -1,0 +1,9 @@
+---
+- name: Deploy Node Exporter
+  hosts: all
+  become: true
+  vars_files:
+    - vars/secret.yml 
+
+  roles:
+    - node_exporter
