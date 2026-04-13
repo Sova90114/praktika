@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    image: registry.gitlab.com/ВАШ_НИК/ВАШ_ПРОЕКТ:latest
+    container_name: my-app-container
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_VERSION=${CI_COMMIT_SHORT_SHA}
